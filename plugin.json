@@ -1,0 +1,21 @@
+{
+  "id": "doc-supervisor",
+  "name": "文档质量监督员",
+  "version": "0.3.0",
+  "description": "组织阶段：语义画像驱动的确定性质量体检——证据制发现（每条附证据）、分型基线、四级分级（P0 错误风险/P1 深度不足/P3 结构）；不直接改文档，重写建议交小诺经用户确认；行级「引用」把单篇发现组装完整提示词预填小诺输入框",
+  "entry": "index.js",
+  "permissions": [
+    "agent:tools",
+    "db:read",
+    "file:read"
+  ],
+  "contributions": [
+    {
+      "point": "nav.entry",
+      "key": "quality-audit",
+      "action": "质量体检",
+      "method": "pageQualityAudit",
+      "slot": "nav.sidebar"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+[
+  { "tool": "audit_doc_quality", "args": {}, "expect": { "outputContains": "质量分" } },
+  { "tool": "audit_doc_quality", "args": { "limit": 3 }, "expect": { "outputContains": "体检口径" } },
+  { "tool": "quality_overview", "args": {}, "expect": { "outputContains": "全库质量分布" } }
+]
